@@ -9,8 +9,8 @@ type CurrencyInputProps = {
 export default function CurrencyInput({inputRef, handleInput, decimalPlaces, ...rest}: CurrencyInputProps) {
     return (
         <div
-            className={"flex items-center rounded-2xl bg-gray-800 border border-gray-700 shadow-lg"}> {/* Fundo escuro e borda */}
-            <p className={"text-2xl p-2 text-gray-400 font-medium"}>R$</p> {/* Cor do R$ ajustada */}
+            className={"flex items-center rounded-2xl bg-gray-800 border border-gray-700 shadow-lg"}> 
+            <p className={"text-2xl p-2 text-gray-400 font-medium"}>R$</p>
             <input
                 ref={inputRef}
                 type="text"
