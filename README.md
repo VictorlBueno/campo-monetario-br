@@ -15,3 +15,9 @@ O componente permite com que o usuário digite valores numéricos livremente (ex
 - Integração simples com projetos React/Next.js
 
 ---
+
+## 🖥️ Preview
+
+Link: [https://campo-monetario-br.vercel.app/](https://campo-monetario-br.vercel.app/)
+
+![image](https://github.com/user-attachments/assets/473a3c62-99b2-451d-a930-f839d966bd1c)
