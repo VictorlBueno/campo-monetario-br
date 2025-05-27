@@ -5,17 +5,17 @@ import React, { ChangeEvent, InputHTMLAttributes } from "react";
 type DecimalPlacesInputProps = {
     decimalPlaces: number;
     setDecimalPlaces: React.Dispatch<React.SetStateAction<number>>;
-} & Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value' | 'type' | 'min' | 'max' | 'id'>; // Omitimos 'max' também
+} & Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value' | 'type' | 'min' | 'max' | 'id'>; 
 
 export default function DecimalPlacesInput({ decimalPlaces, setDecimalPlaces, ...rest }: DecimalPlacesInputProps) {
 
     const handleDecimalPlacesChange = (e: ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.target.value, 10);
-        // Garante que o valor não seja NaN, seja positivo e não exceda 99
+
         if (!isNaN(value) && value >= 0 && value <= 99) {
             setDecimalPlaces(value);
-        } else if (e.target.value === '') { // Permite que o campo fique vazio temporariamente
-            setDecimalPlaces(0); // Ou defina um valor padrão razoável para vazio
+        } else if (e.target.value === '') {
+            setDecimalPlaces(0);
         }
     };
 
@@ -28,7 +28,7 @@ export default function DecimalPlacesInput({ decimalPlaces, setDecimalPlaces, ..
                 id="decimalPlaces"
                 type="number"
                 min="0"
-                max="99" // Adicionada a propriedade max
+                max="99" 
                 value={decimalPlaces}
                 onChange={handleDecimalPlacesChange}
                 className="
